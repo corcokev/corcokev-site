@@ -16,16 +16,18 @@ const Experience = ({ setSelectedPage }: Props) => {
 
           <div>
             <div className="flex justify-between">
-              <p className="text-xl text-gray-300">
+              <p className="text-xl text-gray-300 text-start">
                 Software Development Engineer
               </p>
-              <p className="text-xl text-gray-300">
+              <p className="text-xl text-gray-300 text-end">
                 Arlington, VA - Pittsburgh, PA
               </p>
             </div>
             <div className="flex justify-between">
-              <p className="text-xl text-gray-300">AWS - Amazon</p>
-              <p className="text-xl text-gray-300">May 2023 - Present</p>
+              <p className="text-xl text-gray-300 text-start">AWS - Amazon</p>
+              <p className="text-xl text-gray-300 text-end">
+                May 2023 - Present
+              </p>
             </div>
 
             <ul>
@@ -95,14 +97,16 @@ const Experience = ({ setSelectedPage }: Props) => {
 
           <div>
             <div className="flex justify-between">
-              <p className="text-xl text-gray-300">
+              <p className="text-xl text-gray-300 text-start">
                 Software Development Engineer, Intern
               </p>
-              <p className="text-xl text-gray-300">Arlington, VA</p>
+              <p className="text-xl text-gray-300 text-end">Arlington, VA</p>
             </div>
             <div className="flex justify-between">
-              <p className="text-xl text-gray-300">AWS </p>
-              <p className="text-xl text-gray-300">May 2022 - August 2022</p>
+              <p className="text-xl text-gray-300 text-start">AWS </p>
+              <p className="text-xl text-gray-300 text-end">
+                May 2022 - August 2022
+              </p>
             </div>
 
             <ul>
