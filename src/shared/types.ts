@@ -3,4 +3,5 @@ export enum Page {
   About = "about",
   Skills = "skills",
   Experience = "Experience",
+  Contact = "contact",
 }
