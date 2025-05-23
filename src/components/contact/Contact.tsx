@@ -27,9 +27,7 @@ const Contact = ({ setSelectedPage }: Props) => {
     <section id="contact" className="gap-16 bg-secondary py-3 md:h-full">
       <div className="bg-primary rounded-lg p-10 md:flex mx-auto w-3/4 items-center justify-left md:h-3/4">
         <div className="flex flex-col justify-between gap-3">
-          <motion.div onViewportEnter={() => setSelectedPage(Page.Contact)}>
-            <h1 className="text-4xl font-bold text-white">Contact Me</h1>
-          </motion.div>
+          <h1 className="text-4xl font-bold text-white">Contact Me</h1>
           <div className="mt-10 justify-between gap-8 md:flex">
             <form
               target="_blank"
@@ -90,12 +88,17 @@ const Contact = ({ setSelectedPage }: Props) => {
                 </p>
               )}
 
-              <button
-                type="submit"
-                className="mt-5 rounded-lg bg-secondary px-20 py-3 transition duration-500 hover:text-mgreen"
+              <motion.div
+                onViewportEnter={() => setSelectedPage(Page.Contact)}
+                onViewportLeave={() => setSelectedPage(Page.Experience)}
               >
-                SUBMIT
-              </button>
+                <button
+                  type="submit"
+                  className="mt-5 rounded-lg bg-secondary px-20 py-3 transition duration-500 hover:text-mgreen"
+                >
+                  SUBMIT
+                </button>
+              </motion.div>
             </form>
           </div>
         </div>
