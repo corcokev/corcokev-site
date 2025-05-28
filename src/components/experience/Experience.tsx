@@ -7,8 +7,8 @@ interface Props {
 
 const Experience = ({ setSelectedPage }: Props) => {
   return (
-    <section id="experience" className="gap-16 bg-secondary py-3 md:h-full">
-      <div className="bg-primary rounded-lg p-10 md:flex mx-auto w-3/4 items-center justify-left md:h-3/4">
+    <section id="experience" className="bg-secondary gap-16 py-3 md:h-full">
+      <div className="bg-primary justify-left mx-auto w-3/4 items-center rounded-lg p-10 md:flex md:h-3/4">
         <div className="flex flex-col justify-between gap-3">
           <motion.h1 onViewportEnter={() => setSelectedPage(Page.Experience)}>
             <h1 className="text-4xl font-bold text-white">Experience</h1>
@@ -16,21 +16,21 @@ const Experience = ({ setSelectedPage }: Props) => {
 
           <div>
             <div className="flex justify-between">
-              <p className="text-xl text-gray-300 text-start">
+              <p className="text-start text-xl text-gray-300">
                 Software Development Engineer
               </p>
-              <p className="text-xl text-gray-300 text-end">
+              <p className="text-end text-xl text-gray-300">
                 Arlington, VA - Pittsburgh, PA
               </p>
             </div>
             <div className="flex justify-between">
-              <p className="text-xl text-gray-300 text-start">AWS - Amazon</p>
-              <p className="text-xl text-gray-300 text-end">
+              <p className="text-start text-xl text-gray-300">AWS - Amazon</p>
+              <p className="text-end text-xl text-gray-300">
                 May 2023 - Present
               </p>
             </div>
 
-            <ul>
+            <ul className="list-disc pl-5">
               <li>
                 <p className="text-lg text-gray-300">
                   <b>
@@ -97,19 +97,19 @@ const Experience = ({ setSelectedPage }: Props) => {
 
           <div>
             <div className="flex justify-between">
-              <p className="text-xl text-gray-300 text-start">
+              <p className="text-start text-xl text-gray-300">
                 Software Development Engineer, Intern
               </p>
-              <p className="text-xl text-gray-300 text-end">Arlington, VA</p>
+              <p className="text-end text-xl text-gray-300">Arlington, VA</p>
             </div>
             <div className="flex justify-between">
-              <p className="text-xl text-gray-300 text-start">AWS </p>
-              <p className="text-xl text-gray-300 text-end">
+              <p className="text-start text-xl text-gray-300">AWS </p>
+              <p className="text-end text-xl text-gray-300">
                 May 2022 - August 2022
               </p>
             </div>
 
-            <ul>
+            <ul className="list-disc pl-5">
               <li>
                 <p className="text-xl text-gray-300">
                   <b>
