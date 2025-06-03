@@ -25,7 +25,11 @@ const Contact = ({ setSelectedPage }: Props) => {
 
   return (
     <section id="contact" className="bg-secondary gap-16 py-3 md:h-full">
-      <div className="bg-primary justify-left mx-auto w-3/4 items-center rounded-lg p-10 md:flex md:h-3/4">
+      <motion.div
+        onViewportEnter={() => setSelectedPage(Page.Contact)}
+        viewport={{ amount: "all" }}
+        className="bg-primary justify-left mx-auto w-3/4 items-center rounded-lg p-10 md:flex md:h-3/4"
+      >
         <div className="flex flex-col justify-between gap-3">
           <h1 className="text-4xl font-bold text-white">Contact Me</h1>
           <div className="mt-5 justify-between gap-8 md:flex">
@@ -88,21 +92,18 @@ const Contact = ({ setSelectedPage }: Props) => {
                 </p>
               )}
 
-              <motion.div
-                onViewportEnter={() => setSelectedPage(Page.Contact)}
-                onViewportLeave={() => setSelectedPage(Page.Experience)}
-              >
+              <div>
                 <button
                   type="submit"
                   className="bg-secondary hover:text-mgreen mt-5 rounded-lg px-20 py-3 transition duration-500"
                 >
                   SUBMIT
                 </button>
-              </motion.div>
+              </div>
             </form>
           </div>
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 };

@@ -29,6 +29,8 @@ function App() {
     };
   }, []);
 
+  console.log("Selected Page:", selectedPage);
+
   return (
     <>
       <div className="app">

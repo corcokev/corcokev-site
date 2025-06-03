@@ -8,11 +8,15 @@ interface Props {
 const Experience = ({ setSelectedPage }: Props) => {
   return (
     <section id="experience" className="bg-secondary gap-16 py-3 md:h-full">
-      <div className="bg-primary justify-left mx-auto w-3/4 items-center rounded-lg p-10 md:flex md:h-3/4">
+      <motion.div
+        viewport={{ amount: "all" }}
+        onViewportEnter={() => setSelectedPage(Page.Experience)}
+        className="bg-primary justify-left mx-auto w-3/4 items-center rounded-lg p-10 md:flex md:h-3/4"
+      >
         <div className="flex flex-col justify-between gap-3">
-          <motion.h1 onViewportEnter={() => setSelectedPage(Page.Experience)}>
+          <h1>
             <h1 className="text-4xl font-bold text-white">Experience</h1>
-          </motion.h1>
+          </h1>
 
           <div className="mt-5">
             <div className="flex justify-between">
@@ -145,7 +149,7 @@ const Experience = ({ setSelectedPage }: Props) => {
             </ul>
           </div>
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 };

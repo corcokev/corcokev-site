@@ -8,11 +8,15 @@ type Props = {
 function Skills({ setSelectedPage }: Props) {
   return (
     <section id="skills" className="bg-secondary gap-16 py-3 md:h-full">
-      <div className="bg-primary justify-left mx-auto w-3/4 items-center rounded-lg p-10 md:flex md:h-3/4">
+      <motion.div
+        viewport={{ amount: "all" }}
+        onViewportEnter={() => setSelectedPage(Page.Skills)}
+        className="bg-primary justify-left mx-auto w-3/4 items-center rounded-lg p-10 md:flex md:h-3/4"
+      >
         <div className="">
-          <motion.div onViewportEnter={() => setSelectedPage(Page.Skills)}>
+          <div>
             <h1 className="text-4xl font-bold text-white">Skills</h1>
-          </motion.div>
+          </div>
 
           <div className="mt-5 text-lg text-gray-300">
             <ul>
@@ -39,7 +43,7 @@ function Skills({ setSelectedPage }: Props) {
             </ul>
           </div>
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 }
