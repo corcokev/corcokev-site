@@ -12,27 +12,35 @@ interface Props {
   setSelectedPage: (value: Page) => void;
 }
 
-const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
-  const flexBetween = "flex items-center justify-between";
-  const flexLeft = "flex items-center justify-start";
-  const flexRight = "flex items-center justify-end";
-  const textColor = "text-white";
-  const navBarBackground = isTopOfPage ? "" : "bg-secondary drop-shadow-xl";
+const navBarClass = "fixed top-0 z-30 w-full py-4";
+const navContainerClass = "mx-auto w-3/4";
+const flexBetween = "flex items-center justify-between";
+const flexLeft = "flex items-center justify-start";
+const flexRight = "flex items-center justify-end";
+const textColor = "text-white";
+const navBarBackground = (isTopOfPage: boolean) =>
+  isTopOfPage ? "" : "bg-secondary shadow-md";
+const sidebarClass =
+  "bg-secondary fixed right-0 bottom-0 flex h-full flex-col overflow-hidden pt-15 drop-shadow-xl";
+const sidebarContentClass = `${flexRight} flex-col gap-10 text-center text-2xl`;
+const linkGroupClass = `${flexBetween} gap-8 text-sm`;
 
-  const isAboveMediumScreens = useMediaQuery("(min-width: 1060px)");
-  const [isMenuToggled, setIsMenuToggled] = useState<boolean>(false);
+const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
   const containerControls = useAnimationControls();
 
   const containerVariants = {
     open: {
       width: "300px",
-      transition: { type: "spring", damping: 15, duration: 0.3 },
+      transition: { type: "spring", damping: 15, duration: 0.5 },
     },
     close: {
       width: "0px",
-      transition: { type: "spring", damping: 15, duration: 0.3 },
+      transition: { type: "spring", damping: 15, duration: 0.5 },
     },
   };
+
+  const isAboveMediumScreens = useMediaQuery("(min-width: 1060px)");
+  const [isMenuToggled, setIsMenuToggled] = useState<boolean>(false);
 
   useEffect(() => {
     if (isMenuToggled) {
@@ -49,16 +57,16 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
   return (
     <nav>
       <div
-        className={`${navBarBackground} ${flexBetween} fixed top-0 z-30 w-full py-4`}
+        className={`${navBarBackground(isTopOfPage)} ${flexBetween} ${navBarClass}`}
       >
-        <div className={`${flexBetween} mx-auto w-3/4`}>
+        <div className={`${flexBetween} ${navContainerClass}`}>
           <div className={`${flexLeft} w-full gap-16`}>
             <img className="logo" alt="logo" src={Logo} />
           </div>
 
           {isAboveMediumScreens ? (
             <div className={`${flexRight} w-full`}>
-              <div className={`${flexBetween} gap-8 text-sm`}>
+              <div className={linkGroupClass}>
                 <Link
                   page={Page.Home}
                   selectedPage={selectedPage}
@@ -87,11 +95,11 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
               </div>
             </div>
           ) : isMenuToggled ? (
-            <button className="rounded-full" onClick={() => handleOpenClose()}>
+            <button className="rounded-full" onClick={handleOpenClose}>
               <XMarkIcon className={`${textColor} h-6 w-6`} />
             </button>
           ) : (
-            <button className="rounded-full" onClick={() => handleOpenClose()}>
+            <button className="rounded-full" onClick={handleOpenClose}>
               <Bars3Icon className={`${textColor} h-6 w-6`} />
             </button>
           )}
@@ -103,13 +111,13 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
             initial="close"
             animate={containerControls}
             variants={containerVariants}
-            className="bg-secondary fixed right-0 bottom-0 flex h-full flex-col overflow-hidden pt-20 drop-shadow-xl"
+            className={sidebarClass}
           >
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: isMenuToggled ? 1 : 0 }}
               transition={{ duration: 0.3 }}
-              className={`${flexRight} flex-col gap-10 text-center text-2xl`}
+              className={sidebarContentClass}
             >
               <Link
                 page={Page.Home}
