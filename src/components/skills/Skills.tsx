@@ -29,8 +29,8 @@ type Props = {
 
 const skillsFlexClass = "flex flex-wrap gap-6 justify-start";
 const skillCardClass =
-  "flex flex-col items-center rounded-lg bg-secondary p-6 shadow-md w-35 h-38 justify-center";
-const skillIconClass = "mb-2 h-12 w-12 text-mgreen";
+  "flex flex-col items-center rounded-lg bg-secondary p-4 shadow-md w-28 h-28 md:w-35 md:h-38 justify-center";
+const skillIconClass = "mb-2 h-8 w-8 md:h-12 md:w-12 text-mgreen";
 const skillNameClass = subtitleClass + " font-semibold text-white";
 const skillLevelClass = "text-sm text-gray-400";
 

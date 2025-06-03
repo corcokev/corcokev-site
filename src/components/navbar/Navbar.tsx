@@ -13,7 +13,7 @@ interface Props {
 }
 
 const navBarClass = "fixed top-0 z-30 w-full py-4";
-const navContainerClass = "mx-auto w-3/4";
+const navContainerClass = "mx-auto w-7/8 md:w-3/4";
 const flexBetween = "flex items-center justify-between";
 const flexLeft = "flex items-center justify-start";
 const flexRight = "flex items-center justify-end";
