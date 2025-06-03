@@ -1,54 +1,62 @@
-# React + TypeScript + Vite
+# Kevin Corcoran Portfolio Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a personal portfolio website built with React, TypeScript, and Vite. It showcases my background, skills, experience, education, and provides a way to contact me. The site is fully responsive and styled with Tailwind CSS, featuring smooth animations and a modern UI.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Responsive design** for desktop and mobile
+- **Animated navigation** and sidebar
+- **Skills grid** with icons and proficiency levels
+- **Experience** sections with clear formatting
+- **Contact form** with validation
 
-## Expanding the ESLint configuration
+## Components Overview
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### `Home`
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+Landing section with my name, title, location, and portrait.
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### `AboutMe`
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Brief summary of my background, technical focus, and strengths.
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+### `Skills`
+
+A grid of technology cards, each showing an icon, name, and my proficiency (Advanced, Intermediate, Beginner). Technologies include Java, TypeScript, JavaScript, Python, React, Node.js, AWS, Git, Ruby, SQL, GraphQL, Dart, Flutter, Dagger, Guice, and GCP.
+
+### `Experience`
+
+Details my professional experience, including:
+
+- Role and company (e.g., Software Development Engineer at AWS/Amazon)
+- Location and dates
+- Bullet points describing key projects, leadership, and impact
+
+### `Contact`
+
+A form for visitors to send me a message. Includes validation for name, email, and message fields.
+
+### `Navbar`
+
+Sticky navigation bar with animated sidebar for mobile. Links to all main sections.
+
+## Getting Started
+
+1. Install dependencies:
+   ```sh
+   npm install
+   ```
+2. Start the development server:
+   ```sh
+   npm run dev
+   ```
+3. Open [http://localhost:5173](http://localhost:5173) in your browser.
+
+## Customization
+
+- Update your information and images in the `src/assets` and component files.
+- Adjust styles in `classUtils.ts` and Tailwind config as needed.
+
+---
+
+This project uses Vite, React, TypeScript, Tailwind CSS, Framer Motion, and React Hook Form.
