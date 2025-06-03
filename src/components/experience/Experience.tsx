@@ -13,7 +13,7 @@ const Experience = ({ setSelectedPage }: Props) => {
         onViewportEnter={() => setSelectedPage(Page.Experience)}
         className="bg-primary justify-left mx-auto w-3/4 items-center rounded-lg p-10 md:flex md:h-3/4"
       >
-        <div className="flex flex-col justify-between gap-3">
+        <div className="flex flex-col justify-between">
           <h1>
             <h1 className="text-4xl font-bold text-white">Experience</h1>
           </h1>
@@ -100,7 +100,7 @@ const Experience = ({ setSelectedPage }: Props) => {
           </div>
 
           <div>
-            <div className="flex justify-between">
+            <div className="mt-3 flex justify-between">
               <p className="text-start text-xl text-gray-300">
                 Software Development Engineer, Intern
               </p>
