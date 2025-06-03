@@ -7,11 +7,11 @@ import {
   subtitleClass,
 } from "../classUtils";
 import javaIcon from "@/assets/Java.png";
-import typescriptIcon from "@/assets/TypeScript.png";
+import typescriptIcon from "@/assets/Typescript.png";
 import reactIcon from "@/assets/React.png";
 import pythonIcon from "@/assets/Python.png";
 import nodeIcon from "@/assets/NodeJS.png";
-import javascriptIcon from "@/assets/JavaScript.png";
+import javascriptIcon from "@/assets/Javascript.png";
 import awsIcon from "@/assets/AWS.png";
 import gitIcon from "@/assets/Git.png";
 import rubyIcon from "@/assets/Ruby.png";
