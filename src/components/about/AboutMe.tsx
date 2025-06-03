@@ -7,8 +7,8 @@ type Props = {
 
 function AboutMe({ setSelectedPage }: Props) {
   return (
-    <section id="about" className="gap-16 bg-secondary py-3 md:h-full">
-      <div className="bg-primary rounded-lg p-10 md:flex mx-auto w-3/4 items-center justify-left md:h-3/4">
+    <section id="about" className="bg-secondary gap-16 py-3 md:h-full">
+      <div className="bg-primary justify-left mx-auto w-3/4 items-center rounded-lg p-10 md:flex md:h-3/4">
         <div className="">
           <motion.div
             onViewportEnter={() => setSelectedPage(Page.About)}
@@ -17,7 +17,7 @@ function AboutMe({ setSelectedPage }: Props) {
             <h1 className="text-4xl font-bold text-white">About me</h1>
           </motion.div>
 
-          <p className="text-lg text-gray-300">
+          <p className="mt-5 text-lg text-gray-300">
             Full-stack software engineer with proven success designing and
             launching scalable cloud-based systems at AWS. Skilled in building
             production-ready APIs, infrastructure automation, and data-driven

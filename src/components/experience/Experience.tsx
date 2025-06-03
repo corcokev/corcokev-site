@@ -14,7 +14,7 @@ const Experience = ({ setSelectedPage }: Props) => {
             <h1 className="text-4xl font-bold text-white">Experience</h1>
           </motion.h1>
 
-          <div>
+          <div className="mt-5">
             <div className="flex justify-between">
               <p className="text-start text-xl text-gray-300">
                 Software Development Engineer
@@ -111,7 +111,7 @@ const Experience = ({ setSelectedPage }: Props) => {
 
             <ul className="list-disc pl-5">
               <li>
-                <p className="text-xl text-gray-300">
+                <p className="text-lg text-gray-300">
                   <b>
                     <i>Developed clean, thoroughly tested code</i>
                   </b>{" "}
@@ -119,7 +119,7 @@ const Experience = ({ setSelectedPage }: Props) => {
                 </p>
               </li>
               <li>
-                <p className="text-xl text-gray-300">
+                <p className="text-lg text-gray-300">
                   <b>
                     <i>Implemented and released a Python API client</i>
                   </b>{" "}
@@ -127,7 +127,7 @@ const Experience = ({ setSelectedPage }: Props) => {
                 </p>
               </li>
               <li>
-                <p className="text-xl text-gray-300">
+                <p className="text-lg text-gray-300">
                   <b>
                     <i>Proactively identified and resolved bugs</i>
                   </b>{" "}
@@ -135,7 +135,7 @@ const Experience = ({ setSelectedPage }: Props) => {
                 </p>
               </li>
               <li>
-                <p className="text-xl text-gray-300">
+                <p className="text-lg text-gray-300">
                   <b>
                     <i>Actively contributed to Agile ceremonies</i>
                   </b>{" "}

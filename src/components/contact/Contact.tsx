@@ -24,11 +24,11 @@ const Contact = ({ setSelectedPage }: Props) => {
   };
 
   return (
-    <section id="contact" className="gap-16 bg-secondary py-3 md:h-full">
-      <div className="bg-primary rounded-lg p-10 md:flex mx-auto w-3/4 items-center justify-left md:h-3/4">
+    <section id="contact" className="bg-secondary gap-16 py-3 md:h-full">
+      <div className="bg-primary justify-left mx-auto w-3/4 items-center rounded-lg p-10 md:flex md:h-3/4">
         <div className="flex flex-col justify-between gap-3">
           <h1 className="text-4xl font-bold text-white">Contact Me</h1>
-          <div className="mt-10 justify-between gap-8 md:flex">
+          <div className="mt-5 justify-between gap-8 md:flex">
             <form
               target="_blank"
               onSubmit={onSubmit}
@@ -45,7 +45,7 @@ const Contact = ({ setSelectedPage }: Props) => {
                 })}
               />
               {errors.name && (
-                <p className="mt-1 text-primary-500">
+                <p className="text-primary-500 mt-1">
                   {errors.name.type === "required" && "This field is required."}
                   {errors.name.type === "maxLength" &&
                     "Max length is 100 char."}
@@ -62,7 +62,7 @@ const Contact = ({ setSelectedPage }: Props) => {
                 })}
               />
               {errors.email && (
-                <p className="mt-1 text-primary-500">
+                <p className="text-primary-500 mt-1">
                   {errors.email.type === "required" &&
                     "This field is required."}
                   {errors.email.type === "pattern" && "Invalid email address."}
@@ -80,7 +80,7 @@ const Contact = ({ setSelectedPage }: Props) => {
                 })}
               />
               {errors.message && (
-                <p className="mt-1 text-primary-500">
+                <p className="text-primary-500 mt-1">
                   {errors.message.type === "required" &&
                     "This field is required."}
                   {errors.message.type === "maxLength" &&
@@ -94,7 +94,7 @@ const Contact = ({ setSelectedPage }: Props) => {
               >
                 <button
                   type="submit"
-                  className="mt-5 rounded-lg bg-secondary px-20 py-3 transition duration-500 hover:text-mgreen"
+                  className="bg-secondary hover:text-mgreen mt-5 rounded-lg px-20 py-3 transition duration-500"
                 >
                   SUBMIT
                 </button>
