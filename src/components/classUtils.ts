@@ -1,7 +1,7 @@
 // Utility file for shared Tailwind class names
 
 export const containerClass =
-  "bg-primary mx-auto w-7/8 rounded-lg p-10 md:flex md:h-3/4 md:h-3/4 items-center justify-left";
+  "bg-primary mx-auto w-7/8 rounded-lg p-10 md:flex md:h-3/4 md:w-3/4 items-center justify-left";
 export const sectionClass = "bg-secondary gap-16 py-3 md:h-full";
 export const headingClass = "text-4xl font-bold text-white mb-5";
 export const subtitleClass = "text-lg text-gray-300";
