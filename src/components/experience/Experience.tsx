@@ -122,6 +122,44 @@ const Experience = ({ setSelectedPage }: Props) => (
             </li>
           </ul>
         </div>
+
+        {/* Carpentry Experience */}
+        <div className="mt-8">
+          <div className="flex justify-between">
+            <p className={jobTitleClass}>Carpenter</p>
+            <p className={jobLocationClass}>Irwin, PA</p>
+          </div>
+          <div className="mb-2 flex justify-between">
+            <p className={companyClass}>Three Kelly Construction</p>
+            <p className={dateClass}>2015 – 2020</p>
+          </div>
+          <ul className={listClass}>
+            <li>
+              <span className={listItemTitleClass}>
+                Managed custom projects from concept to delivery
+              </span>
+              , ensuring precision, safety, and quality under strict deadlines.
+            </li>
+            <li>
+              <span className={listItemTitleClass}>
+                Applied creative problem-solving
+              </span>{" "}
+              to design and implement solutions for unique client requirements.
+            </li>
+            <li>
+              <span className={listItemTitleClass}>
+                Coordinated with clients, vendors, and team members
+              </span>{" "}
+              to meet project goals on time and within budget.
+            </li>
+            <li>
+              <span className={listItemTitleClass}>
+                Maintained a high level of craftsmanship and attention to detail
+              </span>
+              , qualities carried forward into engineering work.
+            </li>
+          </ul>
+        </div>
       </div>
     </motion.div>
   </section>
