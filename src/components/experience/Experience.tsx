@@ -31,7 +31,7 @@ const Experience = ({ setSelectedPage }: Props) => (
         {/* Full-time Experience */}
         <div className="mb-8">
           <div className="flex justify-between">
-            <p className={jobTitleClass}>Software Development Engineer</p>
+            <p className={jobTitleClass}>Software Development Engineer II</p>
             <p className={jobLocationClass}>Arlington, VA - Pittsburgh, PA</p>
           </div>
           <div className="mb-2 flex justify-between">
