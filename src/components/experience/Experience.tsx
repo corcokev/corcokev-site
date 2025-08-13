@@ -131,7 +131,7 @@ const Experience = ({ setSelectedPage }: Props) => (
           </div>
           <div className="mb-2 flex justify-between">
             <p className={companyClass}>Three Kelly Construction</p>
-            <p className={dateClass}>2015 – 2020</p>
+            <p className={dateClass}>2017 – 2022</p>
           </div>
           <ul className={listClass}>
             <li>
